@@ -1,0 +1,43 @@
+**Steps to run spring boot app**
+
+
+docker pull mongodb/mongodb-community-server:7.0.8-ubuntu2204
+docker run --name mongodb -p 27017:27017 -d mongodb/mongodb-community-server:latest
+
+1) install java 21
+2) install maven tool
+3) install intellij editor community edition
+4) open the project in intellij ide
+
+To run database
+1) install docker
+2) open command prompt and run the below command
+ docker-compose up -d
+3) run cmd _docker ps_ in console to see if both containers are running
+
+H2-CONSOLE:
+-----------
+http://localhost:8080/h2-console
+
+Once docker is up and running with postgres db
+run java application in intellij ide
+
+
+//-- api docs
+//------ api related to user
+
+login user :
+    POST /api/login
+register user:
+    POST /api/register
+change pasword
+    PUT /api/user/changepwd/
+update user:
+    PUT /api/user
+add address
+    POST /api/user/address
+update address
+    PUT /api/user/address
+delete user
+    DELETE /api/user
+
